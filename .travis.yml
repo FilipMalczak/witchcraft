@@ -1,0 +1,8 @@
+language: d
+
+jobs:
+  include:
+    - stage: non-aggressive
+      script: dub test --compiler=${DC}
+    - stage: aggressive
+      script: dub test -c aggressive --compiler=${DC}
